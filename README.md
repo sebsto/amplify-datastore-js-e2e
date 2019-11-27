@@ -22,6 +22,10 @@ cd amplify-datastore-js-e2e
 
 ## Add DataStore to your app
 
+This adds support for datastore, it created the API for you (there is no need to type `amplify add api` after this)
+
 ```sh
-npx amplify-app@canary
+npx amplify-app
 ```
+
+
