@@ -22,10 +22,65 @@ cd amplify-datastore-js-e2e
 
 ## Add DataStore to your app
 
-This adds support for datastore, it created the API for you (there is no need to type `amplify add api` after this)
+Add support for datastore, it creates the API for you (there is no need to type `amplify add api` after this)
 
 ```sh
 npx amplify-app
 ```
+
+## Add our GraphQL schema 
+
+```sh
+echo "enum PostStatus {
+  ACTIVE
+  INACTIVE
+}
+
+type Post @model {
+  id: ID!
+  title: String!
+  comments: [Comment] @connection(name: "PostComments")
+  rating: Int!
+  status: PostStatus!
+}
+type Comment @model {
+  id: ID!
+  content: String
+  post: Post @connection(name: "PostComments")
+}" > amplify/backend/api/amplifyDatasource/schema.graphql
+```
+
+## Add dependencies
+
+```sh
+npm i @aws-amplify/core @aws-amplify/datastore @aws-amplify/pubsub
+```
+
+## Run modelgen
+
+Model-Gen generates code to implement language specific model classes.
+
+```sh
+npm run amplify-modelgen
+```
+
+At this stage, you can already use the app in standalone mode.  No AWS Account is required.
+
+## Create the cloud-based backend
+
+```sh
+npm run amplify-push
+```
+
+## Implement the App 
+
+```sh
+# download a simple react app
+curl -o src/App.js https://raw.githubusercontent.com/sebsto/amplify-datastore-js-e2e/master/src/App.js
+
+# start the app 
+npm run start
+```
+
 
 
