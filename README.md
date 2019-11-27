@@ -72,7 +72,7 @@ At this stage, you can already use the app in standalone mode.  No AWS Account i
 npm run amplify-push
 ```
 
-## Implement the App 
+## Implement & Start the App 
 
 ```sh
 # download a simple react app
@@ -81,6 +81,18 @@ curl -o src/App.js https://raw.githubusercontent.com/sebsto/amplify-datastore-js
 # start the app 
 npm run start
 ```
+
+## Cleanup 
+
+At the end of your test, you can delete the backend infrastructure
+
+```sh
+amplify delete
+```
+
+You might need to manually delete two Amazon S3 bucket created.
+In the [AWS Console](https://s3.console.aws.amazon.com/s3/home), search for the two buckets having `datastore` part of their name.
+
 
 
 
