@@ -1,31 +1,40 @@
 {
-  "name": "amplify-datastore-js-e2e",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-scripts": "3.2.0"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+    "name": "amplify-datastore-js-e2e",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@aws-amplify/api": "https://amplify-preview.s3-us-west-2.amazonaws.com/datastore/aws-amplify-api-1.2.4.tgz",
+        "@aws-amplify/core": "https://amplify-preview.s3-us-west-2.amazonaws.com/datastore/aws-amplify-core-1.2.4.tgz",
+        "@aws-amplify/datastore": "https://amplify-preview.s3-us-west-2.amazonaws.com/datastore/aws-amplify-datastore-1.0.0.tgz",
+        "@aws-amplify/pubsub": "https://amplify-preview.s3-us-west-2.amazonaws.com/datastore/aws-amplify-pubsub-1.2.4.tgz",
+        "react": "^16.12.0",
+        "react-dom": "^16.12.0",
+        "react-scripts": "3.2.0"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "amplify-modelgen": "node amplify/scripts/amplify-modelgen.js",
+        "amplify-push": "node amplify/scripts/amplify-push.js"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "ini": "^1.3.5"
+    }
 }
