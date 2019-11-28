@@ -39,14 +39,14 @@ echo "enum PostStatus {
 type Post @model {
   id: ID!
   title: String!
-  comments: [Comment] @connection(name: "PostComments")
+  comments: [Comment] @connection(name: \"PostComments\")
   rating: Int!
   status: PostStatus!
 }
 type Comment @model {
   id: ID!
   content: String
-  post: Post @connection(name: "PostComments")
+  post: Post @connection(name: \"PostComments\")
 }" > amplify/backend/api/amplifyDatasource/schema.graphql
 ```
 
@@ -92,7 +92,3 @@ amplify delete
 
 You might need to manually delete two Amazon S3 bucket created.
 In the [AWS Console](https://s3.console.aws.amazon.com/s3/home), search for the two buckets having `datastore` part of their name.
-
-
-
-
