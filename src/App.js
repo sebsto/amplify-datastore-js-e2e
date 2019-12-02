@@ -3,8 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 
 import Amplify from "@aws-amplify/core";
-import { Datastore, Predicates } from "@aws-amplify/datastore";
-import "@aws-amplify/pubsub";
+import { DataStore, Predicates } from "@aws-amplify/DataStore";
 
 import { Post, PostStatus } from "./models";
 
@@ -12,7 +11,7 @@ import awsConfig from "./aws-exports";
 Amplify.configure(awsConfig);
 
 function onCreate() {
-  Datastore.save(
+  DataStore.save(
     new Post({
       title: `New title ${Date.now()}`,
       rating: (function getRandomInt(min, max) {
@@ -26,16 +25,16 @@ function onCreate() {
 }
 
 function onDeleteAll() {
-  Datastore.delete(Post, Predicates.ALL);
+  DataStore.delete(Post, Predicates.ALL);
 }
 
 async function onQuery(setPosts) {
-  const posts = await Datastore.query(Post, c => c.rating("gt", 4));
+  const posts = await DataStore.query(Post, c => c.rating("gt", 4));
   setPosts(posts)
 }
 
 async function listPosts(setPosts) {
-  const posts = await Datastore.query(Post, Predicates.ALL);
+  const posts = await DataStore.query(Post, Predicates.ALL);
   setPosts(posts);
 }
     
@@ -45,7 +44,7 @@ function App() {
 
   useEffect( () => {
     
-    const subscription = Datastore.observe(Post).subscribe(msg => {
+    const subscription = DataStore.observe(Post).subscribe(msg => {
       console.log(msg.model, msg.opType, msg.element);
       listPosts(setPosts);
     });

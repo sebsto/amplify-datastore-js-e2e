@@ -53,7 +53,7 @@ type Comment @model {
 ## Add dependencies
 
 ```sh
-npm i @aws-amplify/core @aws-amplify/datastore @aws-amplify/pubsub
+npm i @aws-amplify/core @aws-amplify/DataStore 
 ```
 
 ## Run modelgen
