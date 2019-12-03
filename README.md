@@ -90,5 +90,5 @@ At the end of your test, you can delete the backend infrastructure
 amplify delete
 ```
 
-You might need to manually delete two Amazon S3 bucket created.
+You might need to manually delete two Amazon S3 buckets created.
 In the [AWS Console](https://s3.console.aws.amazon.com/s3/home), search for the two buckets having `datastore` part of their name.
