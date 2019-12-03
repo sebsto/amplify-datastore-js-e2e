@@ -3,7 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 
 import Amplify from "@aws-amplify/core";
-import { DataStore, Predicates } from "@aws-amplify/DataStore";
+import { DataStore, Predicates } from "@aws-amplify/datastore";
 
 import { Post, PostStatus } from "./models";
 

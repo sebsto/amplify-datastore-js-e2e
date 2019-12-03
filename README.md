@@ -13,11 +13,11 @@ npm i -g @aws-amplify/cli
 ## Create a new react app
 
 ```sh
-npx create-react-app amplify-datastore-js-e2e --use-npm
+npx create-react-app amplify-datastore --use-npm
 ```
 
 ```sh
-cd amplify-datastore-js-e2e
+cd amplify-datastore
 ```
 
 ## Add DataStore to your app
@@ -53,7 +53,7 @@ type Comment @model {
 ## Add dependencies
 
 ```sh
-npm i @aws-amplify/core @aws-amplify/DataStore 
+npm i @aws-amplify/core @aws-amplify/datastore 
 ```
 
 ## Run modelgen
