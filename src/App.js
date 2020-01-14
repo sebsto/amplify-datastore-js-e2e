@@ -44,6 +44,8 @@ function App() {
 
   useEffect( () => {
     
+    listPosts(setPosts);
+
     const subscription = DataStore.observe(Post).subscribe(msg => {
       console.log(msg.model, msg.opType, msg.element);
       listPosts(setPosts);
