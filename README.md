@@ -25,7 +25,7 @@ cd amplify-datastore
 Add support for datastore, it creates the API for you (there is no need to type `amplify add api` after this)
 
 ```sh
-npx amplify-app
+npx amplify-app --platform javascript --framework react
 ```
 
 ## Add our GraphQL schema 
