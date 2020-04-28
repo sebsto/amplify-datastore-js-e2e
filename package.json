@@ -3,12 +3,9 @@
     "version": "0.1.0",
     "private": true,
     "dependencies": {
-        "@aws-amplify/api": "https://amplify-preview.s3-us-west-2.amazonaws.com/datastore/aws-amplify-api-1.2.4.tgz",
-        "@aws-amplify/core": "https://amplify-preview.s3-us-west-2.amazonaws.com/datastore/aws-amplify-core-1.2.4.tgz",
-        "@aws-amplify/datastore": "https://amplify-preview.s3-us-west-2.amazonaws.com/datastore/aws-amplify-datastore-1.0.0.tgz",
-        "@aws-amplify/pubsub": "https://amplify-preview.s3-us-west-2.amazonaws.com/datastore/aws-amplify-pubsub-1.2.4.tgz",
-        "react": "^16.12.0",
-        "react-dom": "^16.12.0",
+        "@aws-amplify/datastore": "^2.0.9",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
         "react-scripts": "3.2.0"
     },
     "scripts": {
